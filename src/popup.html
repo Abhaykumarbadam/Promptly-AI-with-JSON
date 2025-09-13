@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Promptly AI</title>
+  <link rel="stylesheet" href="styles/popup.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+  <div class="header">
+    <div class="logo-container">
+      <img src="promptly_logo_18.png" alt="Promptly AI Logo" class="logo">
+      <h1>Promptly AI</h1>
+    </div>
+    <div class="actions">
+      <button id="theme-toggle" class="icon-button tooltip">
+        <i class="fas fa-moon"></i>
+        <span class="tooltip-text">Toggle Theme</span>
+      </button>
+      <button id="open-side-panel" class="icon-button tooltip">
+        <i class="fas fa-history"></i>
+        <span class="tooltip-text">History</span>
+      </button>
+      <button id="open-options" class="icon-button tooltip">
+        <i class="fas fa-cog"></i>
+        <span class="tooltip-text">Settings</span>
+      </button>
+    </div>
+  </div>
+
+  <div class="main-content">
+    <div class="shortcut-info">
+      <span>Keyboard Shortcut: <kbd id="keyboard-shortcut">Ctrl + M</kbd></span>
+    </div>
+    
+    <div class="format-options">
+      <div class="toggle-container">
+        <span>JSON Format</span>
+        <label class="switch">
+          <input type="checkbox" id="json-toggle" title="Toggle JSON formatting" aria-label="Toggle JSON formatting">
+          <span class="slider round"></span>
+        </label>
+      </div>
+    </div>
+    
+    <button id="reprompt-button" class="primary-button">
+      <span>Enhance Prompt</span>
+    </button>
+    
+    <div id="status-container">
+      <div id="loading" class="hidden">
+        <div class="spinner"></div>
+        <span>Enhancing your prompt...</span>
+      </div>
+      <div id="checkmark" class="hidden">
+        <i class="fas fa-check-circle success-icon"></i>
+        <span>Prompt enhanced!</span>
+      </div>
+      <div id="error-message" class="hidden error-text"></div>
+    </div>
+  </div>
+
+  <script src="scripts/popup.js"></script>
+</body>
+</html>

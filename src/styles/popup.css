@@ -1,0 +1,298 @@
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #f5f7fb;
+  color: #1a1a1a;
+  line-height: 1.5;
+}
+
+/* Container */
+.container {
+  max-width: 1200px;
+  padding: 16px;
+  margin: 0 auto;
+}
+
+/* Card styles */
+.card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.card-header {
+  padding: 16px;
+  border-bottom: 1px solid #eee;
+}
+
+.card-header h1 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #2d3748;
+}
+
+.card-content {
+  padding: 16px;
+}
+
+/* Input group */
+.input-group {
+  margin-bottom: 16px;
+}
+
+.prompt-input {
+  width: 100%;
+  min-height: 80px;
+  padding: 12px;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 0.875rem;
+  resize: none;
+  margin-bottom: 8px;
+  transition: border-color 0.2s;
+}
+
+.prompt-input:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.1);
+}
+
+/* Format options */
+.format-options {
+  margin-bottom: 16px;
+}
+
+.toggle-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.toggle-container span {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #4b5563;
+}
+
+/* Toggle Switch */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 20px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 2px;
+  bottom: 2px;
+  background-color: white;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #3b82f6;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #3b82f6;
+}
+
+input:checked + .slider:before {
+  transform: translateX(20px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+/* Button styles */
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+  border: none;
+}
+
+.button-primary {
+  background-color: #3b82f6;
+  color: white;
+  width: 100%;
+}
+
+.button-primary:hover {
+  background-color: #2563eb;
+}
+
+.button-icon {
+  padding: 6px;
+  background: transparent;
+  color: #64748b;
+}
+
+.button-icon:hover {
+  background-color: #f1f5f9;
+  color: #0f172a;
+}
+
+/* Prompt list */
+.prompts-section h2 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #2d3748;
+  margin-bottom: 12px;
+}
+
+.prompt-list {
+  list-style: none;
+}
+
+.prompt-item {
+  display: flex;
+  align-items: center;
+  padding: 12px;
+  background-color: #f8fafc;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  transition: background-color 0.2s;
+}
+
+.prompt-item:hover {
+  background-color: #f1f5f9;
+}
+
+.prompt-text {
+  flex: 1;
+  font-size: 0.875rem;
+  color: #475569;
+  margin-right: 8px;
+}
+
+.prompt-actions {
+  display: flex;
+  gap: 4px;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.prompt-item:hover .prompt-actions {
+  opacity: 1;
+}
+
+/* Error message */
+.error-message {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px;
+  background-color: #fee2e2;
+  border: 1px solid #fecaca;
+  border-radius: 8px;
+  color: #dc2626;
+  font-size: 0.875rem;
+  margin-bottom: 16px;
+}
+
+.error-icon {
+  width: 16px;
+  height: 16px;
+  stroke: currentColor;
+}
+
+.hidden {
+  display: none;
+}
+
+
+/* Container tweak to limit width for popup */
+.container {
+  max-width: 360px; /* typical extension popup width */
+  padding: 20px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+}
+
+/* Button style */
+.blue-button, #reprompt-button {
+  background-color: #3b82f6;
+  color: white;
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 1rem;
+  margin-top: 15px;
+  transition: background-color 0.3s ease;
+}
+
+.blue-button:hover, #reprompt-button:hover {
+  background-color: #2563eb;
+}
+
+/* Status message styles */
+#loading {
+  color: #2563eb;
+  font-weight: 600;
+  margin-top: 15px;
+}
+
+#checkmark {
+  color: #16a34a;
+  font-weight: 600;
+  margin-top: 15px;
+}
+
+#error-message {
+  color: #dc2626;
+  font-weight: 600;
+  margin-top: 15px;
+}
+
+/* Utility */
+.hidden {
+  display: none;
+}
