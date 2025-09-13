@@ -47,12 +47,14 @@ src/
 4. Optionally, toggle JSON format for structured output.
 5. Use the popup to access settings, theme toggle, and open the side panel for saved prompts.
 6. In the side panel, save up to 5 custom prompts for quick reuse.
+7. Prompts can also be enhanced for Gemini and Grok via API selection in the popup interface.
 
 ---
 
 ## 🛠️ How It Works
 
 - **Content Scripts** inject an "Enhance Prompt" button into supported AI chat sites. When clicked, your prompt is sent to a serverless API (see `lambda_handler.py`) that rewrites it for clarity, structure, and professionalism—never answering the prompt, only improving it.
+-**Gemini & Grok Support** Prompts are processed via direct API integration—select your platform in the popup and enhance from there.
 - **Popup & Side Panel** provide quick access to features, theme, and prompt management.
 - **Background Script** relays API requests and manages configuration.
 
